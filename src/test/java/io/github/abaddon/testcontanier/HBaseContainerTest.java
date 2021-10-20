@@ -1,4 +1,4 @@
-package com.github.abaddon.testcontanier;
+package io.github.abaddon.testcontanier;
 
 import org.junit.ClassRule;
 import org.junit.Test;
