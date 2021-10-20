@@ -24,3 +24,5 @@ jobs:
       run: mvn -B package --file pom.xml
     - name: Upload artifacts
       uses: actions/upload-artifact@v2
+      with:
+        path: ./target
