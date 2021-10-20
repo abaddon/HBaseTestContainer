@@ -1,9 +1,7 @@
-package com.abaddon83.testcontanier;
+package com.github.abaddon.testcontanier;
 
 import org.junit.ClassRule;
 import org.junit.Test;
-
-import java.io.IOException;
 
 import static org.junit.Assert.*;
 

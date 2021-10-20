@@ -1,4 +1,4 @@
-package com.abaddon83.testcontanier;
+package com.github.abaddon.testcontanier;
 
 import com.github.dockerjava.api.command.CreateContainerCmd;
 import org.testcontainers.containers.BindMode;
