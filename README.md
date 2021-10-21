@@ -1,4 +1,4 @@
-image:https://maven-badges.herokuapp.com/maven-central/io.github.abaddon.testcontainer/hbasetestcontainer/badge.svg[Maven Central,link=https://maven-badges.herokuapp.com/maven-central/io.github.abaddon.testcontainer/hbasetestcontainer]
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.abaddon.testcontainer/hbasetestcontainer/badge.svg)](https://maven-badges.herokuapp.com/io.github.abaddon.testcontainer/hbasetestcontainer)
 
 # HBaseTestContainer
 
