@@ -7,4 +7,19 @@
 <!--    <useDirty>false</useDirty>-->
 <!--    <useGitCommitId>false</useGitCommitId>-->
 <!--    <useSnapshot>true</useSnapshot>-->
+    <branchPolicies>
+        <branchPolicy>
+            <pattern>feature_(.*)</pattern>
+            <transformations>
+                <transformation>REMOVE_UNEXPECTED_CHARS</transformation>
+                <transformation>UPPERCASE</transformation>
+            </transformations>
+        </branchPolicy>
+        <branchPolicy>
+            <pattern>(main)</pattern>
+            <transformations>
+                <transformation>IGNORE</transformation>
+            </transformations>
+        </branchPolicy>
+    </branchPolicies>
 </configuration>
