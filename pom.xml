@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.abaddon.testcontanier</groupId>
-    <artifactId>hbasetestcontainers</artifactId>
+    <groupId>io.github.abaddon.testcontainer</groupId>
+    <artifactId>hbasetestcontainer</artifactId>
     <version>0.1</version>
 
     <name>HBaseTestContainers</name>
@@ -13,7 +13,7 @@
         HBaseContainer is a class to use with https://www.testcontainers.org to run HBase as container.
         The class allow you to test any kind of operation that you need to do on Hbase.
     </description>
-    <url>https://github.com/abaddon/HBaseTestContainers</url>
+    <url>https://github.com/abaddon/HBaseTestContainer</url>
 
     <licenses>
         <license>
@@ -24,9 +24,9 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git://github.com/abaddon/HBaseTestContainers.git</connection>
-        <developerConnection>scm:git:git://github.com/abaddon/HBaseTestContainers.git</developerConnection>
-        <url>https://github.com/abaddon/HBaseTestContainers</url>
+        <connection>scm:git:git://github.com/abaddon/HBaseTestContainer.git</connection>
+        <developerConnection>scm:git:git://github.com/abaddon/HBaseTestContainer.git</developerConnection>
+        <url>https://github.com/abaddon/HBaseTestContainer</url>
         <tag>HEAD</tag>
     </scm>
 
