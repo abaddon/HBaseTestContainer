@@ -72,13 +72,14 @@ public class HBaseStoreTest {
     
     }
 ```
-3. create a `hosts` file and load it when you run your tests (if you need).
+3. create a `hosts` file and load it when you run your tests (if you need it).
 
 ## Extra features
 
 ### Bind HBase data folder
 You can use the method `withDataFolderBind(String hostPath)`. Where hostPath is the folder on the host.
 If it's not exist it will be created automatically.
+
 At the moment, the folder is deleted and recreated at each run.
 ```
     @ClassRule
