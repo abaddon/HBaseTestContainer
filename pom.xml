@@ -9,7 +9,26 @@
     <version>0.1</version>
 
     <name>HBaseTestContainers</name>
+    <description>
+        HBaseContainer is a class to use with https://www.testcontainers.org to run HBase as container.
+        The class allow you to test any kind of operation that you need to do on Hbase.
+    </description>
     <url>https://github.com/abaddon/HBaseTestContainers</url>
+
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>https://github.com/abaddon/HBaseTestContainers/blob/1d0a5ebc9d7e595e8e1a6d820a8f06f415840f68/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git://github.com/abaddon/HBaseTestContainers.git</connection>
+        <developerConnection>scm:git:git://github.com/abaddon/HBaseTestContainers.git</developerConnection>
+        <url>https://github.com/abaddon/HBaseTestContainers</url>
+        <tag>HEAD</tag>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
