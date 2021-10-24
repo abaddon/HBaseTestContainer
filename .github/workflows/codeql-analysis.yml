@@ -83,8 +83,12 @@ jobs:
           distribution: 'adopt'
       - name: Build with Maven
         run: mvn --batch-mode --update-snapshots verify
-
-      - name: Codacy Coverage Reporter
-        uses: codacy/codacy-coverage-reporter-action@v1.1.0
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v2
         with:
-          project-token: ${{ secrets.CODECOV_TOKEN }}
+          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+#          files: ./coverage1.xml,./coverage2.xml # optional
+          flags: unittests
+#          name: codecov-umbrella # optional
+#          fail_ci_if_error: true # optional (default = false)
+          verbose: true
