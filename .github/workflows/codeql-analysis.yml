@@ -87,6 +87,7 @@ jobs:
         uses: codecov/codecov-action@v2
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          directory: ./target
 #          files: ./coverage1.xml,./coverage2.xml # optional
           flags: unittests
 #          name: codecov-umbrella # optional
