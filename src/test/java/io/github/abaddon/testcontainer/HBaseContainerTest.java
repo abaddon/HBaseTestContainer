@@ -45,6 +45,19 @@ public class HBaseContainerTest {
 
     }
 
+    @Test
+    public void givenHBaseContainerWhenConvertToStringThenAStringIsReturned() {
+        String toStringExpected="URLS:" +
+                System.getProperty("line.separator")+ "REST API: hbase-docker:8080" +
+                System.getProperty("line.separator")+ "REST UI: http://hbase-docker:8085" +
+                System.getProperty("line.separator")+ "Thrift API: hbase-docker:9090" +
+                System.getProperty("line.separator")+ "Thrift UI: http://hbase-docker:9095" +
+                System.getProperty("line.separator")+ "Zookeeper API: http://hbase-docker:2181" +
+                System.getProperty("line.separator")+ "Master UI: http://hbase-docker:16010";
+
+        assertEquals(toStringExpected.toString(),hbaseContainer.toString());
+    }
+
 
     @Test
     public void testMethodsToGetPorts() {

@@ -82,12 +82,12 @@ public class HBaseContainer extends GenericContainer<HBaseContainer> {
 
     public String toString() {
         StringBuilder urls = new StringBuilder("URLS:");
-        urls.append(String.format("REST API: %s:%s", HOSTNAME, REST_API_PORT));
-        urls.append(String.format("REST UI: http://%s:%s", HOSTNAME, REST_UI_PORT));
-        urls.append(String.format("Thrift API: %s:%s", HOSTNAME, THRIFT_API_PORT));
-        urls.append(String.format("Thrift UI: http://%s:%s", HOSTNAME, THRIFT_UI_PORT));
-        urls.append(String.format("Zookeeper API: http://%s:%s", HOSTNAME, ZOOKEEPER_PORT));
-        urls.append(String.format("Master UI: http://%s:%s", HOSTNAME, MASTER_UI_PORT));
+        urls.append(System.getProperty("line.separator")).append(String.format("REST API: %s:%s", HOSTNAME, REST_API_PORT));
+        urls.append(System.getProperty("line.separator")).append(String.format("REST UI: http://%s:%s", HOSTNAME, REST_UI_PORT));
+        urls.append(System.getProperty("line.separator")).append(String.format("Thrift API: %s:%s", HOSTNAME, THRIFT_API_PORT));
+        urls.append(System.getProperty("line.separator")).append(String.format("Thrift UI: http://%s:%s", HOSTNAME, THRIFT_UI_PORT));
+        urls.append(System.getProperty("line.separator")).append(String.format("Zookeeper API: http://%s:%s", HOSTNAME, ZOOKEEPER_PORT));
+        urls.append(System.getProperty("line.separator")).append(String.format("Master UI: http://%s:%s", HOSTNAME, MASTER_UI_PORT));
         return urls.toString();
     }
 
