@@ -8,19 +8,34 @@ import org.apache.hadoop.hbase.util.Bytes;
 import org.junit.ClassRule;
 import org.junit.Test;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
-public class HBaseContainerTest {
+public class HBaseContainerWithDataFolderBindTest {
 
     private final static String HBASE_HOSTNAME = "hbase-docker";
+    private final static String CONTAINER_DATA_FOLDER = "./tmp";
+
 
     @ClassRule
-    public static HBaseContainer hbaseContainer = new HBaseContainer(HBASE_HOSTNAME);
+    public static HBaseContainer hbaseContainer = new HBaseContainer(HBASE_HOSTNAME)
+            .withDataFolderBind(CONTAINER_DATA_FOLDER);
 
+
+    @Test
+    public void givenHBaseContainerWithDataBindWhenCreatedThenDataFolderExist() {
+
+        File file =new File(CONTAINER_DATA_FOLDER);
+        assertTrue("Folder created",file.isDirectory());
+        assertTrue("Folder created",file.listFiles().length > 0);
+        assertTrue("File ./tmp/test_file removed", !(new File(CONTAINER_DATA_FOLDER+"/test_file")).exists());
+
+    }
 
     @Test
     public void givenHBaseContainerWhenCreateTableThenTableIsCreated() {
