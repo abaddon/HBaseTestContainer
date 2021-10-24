@@ -6,8 +6,9 @@ name: Release
 on:
   create:
     branches-ignore:
-      - 'dependabot/*'
-    tags: [ '*' ]
+      - 'dependabot/**'
+    tags:
+      - v[0-9]+.[0-9]+.[0-9]+
 
 jobs:
   release:
