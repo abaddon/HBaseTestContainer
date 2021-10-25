@@ -1,4 +1,5 @@
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.github.abaddon.testcontainer/hbasetestcontainer/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.github.abaddon.testcontainer/hbasetestcontainer)
+[![codecov](https://codecov.io/gh/abaddon/HBaseTestContainer/branch/main/graph/badge.svg?token=SSCF5PN321)](https://codecov.io/gh/abaddon/HBaseTestContainer)
 
 # HBaseTestContainer
 
