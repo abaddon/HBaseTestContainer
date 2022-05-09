@@ -56,7 +56,7 @@
         <slf4j.version>1.7.36</slf4j.version>
         <log4j.version>2.17.1</log4j.version>
         <junit.version>5.8.2</junit.version>
-        <hbase.version>2.4.11</hbase.version>
+        <hbase.version>2.4.12</hbase.version>
         <jvm.options>-Djdk.net.hosts.file=${project.basedir}/hosts</jvm.options>
     </properties>
 
