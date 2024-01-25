@@ -9,7 +9,7 @@ import org.testcontainers.utility.DockerImageName;
 import java.io.File;
 import java.nio.file.Files;
 import java.time.Duration;
-import java.util.List;
+import java.util.Arrays;
 
 import static java.time.temporal.ChronoUnit.HOURS;
 
@@ -28,7 +28,7 @@ public class HBaseContainer extends GenericContainer<HBaseContainer> {
     public HBaseContainer(String hostname) throws IllegalStateException {
         super(DockerImageName.parse(DOCKER_IMAGE));
         this.HOSTNAME = hostname;
-        setPortBindings(List.of(
+        setPortBindings(Arrays.asList(
                 String.format("%s:%s", REST_API_PORT, REST_API_PORT),
                 String.format("%s:%s", REST_UI_PORT, REST_UI_PORT),
                 String.format("%s:%s", THRIFT_API_PORT, THRIFT_API_PORT),
@@ -38,7 +38,7 @@ public class HBaseContainer extends GenericContainer<HBaseContainer> {
                 "16020:16020",
                 "16000:16000")
         );
-        withCreateContainerCmdModifier(cmd -> ((CreateContainerCmd) cmd).withHostName(HOSTNAME));
+        withCreateContainerCmdModifier(cmd -> cmd.withHostName(HOSTNAME));
         waitingFor(new LogMessageWaitStrategy()
                 .withRegEx(".*Master has completed initialization.*")
                 .withStartupTimeout(Duration.of(5L, HOURS))
